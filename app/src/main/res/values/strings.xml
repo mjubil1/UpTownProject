@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">SideProject</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="title_activity_redeem">RedeemActivity</string>
     <string name="title_activity_login">Sign in</string>
@@ -8,4 +10,8 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="splashText">Powered by:</string>
+    <string name="redeem_points">Redeem Points</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="home">Home</string>
 </resources>

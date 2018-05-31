@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
         Log.d(TAG,"onCreate");
 
         rotate = (ImageView) findViewById(R.id.rotate);
-        animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotateanim);
+        animation = AnimationUtils.loadAnimation(SplashActivity.this,R.anim.rotateanim);
         rotate.startAnimation(animation);
 
         thread = new Thread() {
@@ -33,7 +33,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(2000);
-                    intent = new Intent(getApplicationContext(),LoginActivity.class);
+                    intent = new Intent(SplashActivity.this,LoginActivity.class);
                     startActivity(intent);
                     finish();
                 } catch(InterruptedException e) {
