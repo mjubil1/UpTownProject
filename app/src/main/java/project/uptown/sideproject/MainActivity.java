@@ -4,18 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getName();
-
-    //UI REFERENCES
-    ImageView rotate;
-    Animation animation, animation1;
-    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +16,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG,"onCreate");
 
         initialize();
-
-        animation = AnimationUtils.loadAnimation(this,R.anim.rotateanim);
-        rotate.startAnimation(animation);
-
-        animation1 = AnimationUtils.loadAnimation(this,R.anim.downanim);
-        rotate.startAnimation(animation1);
-        intent = new Intent(this,LoginActivity.class);
-        startActivity(intent);
     }
 
     @Override
@@ -50,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Log.d(TAG,"onPause");
+
     }
 
     @Override
@@ -66,6 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
     /*-------Private Methods-------*/
     private void initialize() {
-        rotate = (ImageView) findViewById(R.id.rotate);
+
     }
 }
