@@ -2,17 +2,113 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:alpha="0.9"
+    android:background="@drawable/login_wallpaper"
     tools:context="project.uptown.sideproject.LoginActivity">
 
-    <TextView
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/email_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:srcCompat="@drawable/uptown"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/email_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/inputshape"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/pwd_input"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="RtlSymmetry" />
 
+    <EditText
+        android:id="@+id/pwd_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/inputshape"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingStart="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/signInBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_input"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/signInBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/buttonshape"
+        android:text="@string/signIn"
+        android:textColor="#f8f8ff"
+        app:layout_constraintBottom_toTopOf="@+id/forgotPwd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwd_input" />
+
+    <TextView
+        android:id="@+id/forgotPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgotPwd"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/googleBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInBtn" />
+
+    <Button
+        android:id="@+id/googleBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/google_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/facebookBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPwd" />
+
+    <Button
+        android:id="@+id/facebookBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/fb_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/googleBtn"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPwd" />
 </android.support.constraint.ConstraintLayout>

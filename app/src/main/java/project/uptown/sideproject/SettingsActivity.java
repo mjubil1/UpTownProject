@@ -1,12 +1,8 @@
 package project.uptown.sideproject;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -19,6 +15,8 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         Log.d(TAG,"onCreate");
+
+        initialize();
     }
 
     @Override
@@ -49,5 +47,10 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG,"onDestroy");
+    }
+
+    /*-------Private Methods-------*/
+    private void initialize() {
+
     }
 }
