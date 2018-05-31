@@ -9,7 +9,6 @@
     android:background="@drawable/login_wallpaper"
     tools:context="project.uptown.sideproject.LoginActivity">
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="100dp"
@@ -67,9 +66,9 @@
         android:id="@+id/signInBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/buttonshape"
         android:text="@string/signIn"
         android:textColor="#f8f8ff"
+        android:background="@drawable/buttonshape"
         app:layout_constraintBottom_toTopOf="@+id/forgotPwd"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -79,9 +78,10 @@
         android:id="@+id/forgotPwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/helveticaneue_medium"
         android:text="@string/forgotPwd"
         android:textColor="#FFFFFF"
-        android:fontFamily="@font/helveticaneue_medium"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/googleBtn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,24 +92,21 @@
         android:id="@+id/googleBtn"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginStart="120dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="125dp"
         android:background="@drawable/google_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/facebookBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgotPwd" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/facebookBtn"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="125dp"
-        android:layout_marginTop="18dp"
         android:background="@drawable/fb_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/googleBtn"
-        app:layout_constraintTop_toBottomOf="@+id/forgotPwd" />
+        app:layout_constraintStart_toEndOf="@+id/googleBtn" />
 </android.support.constraint.ConstraintLayout>

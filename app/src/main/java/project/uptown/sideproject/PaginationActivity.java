@@ -1,26 +1,28 @@
 package project.uptown.sideproject;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+/**
+ * Created by Montrell on 5/31/2018.
+ */
 
-    private static final String TAG = LoginActivity.class.getName();
+public class PaginationActivity  extends AppCompatActivity implements View.OnClickListener {
+
+    private static final String TAG = PaginationActivity.class.getName();
 
     //UI REFERENCES
-    TextView fgPwd;
-    Button signInBtn,googleBtn,facebookBtn;
+    Button registerBtn,signInBtn;
     Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_pagination);
         Log.d(TAG, "onCreate");
         initialize();
     }
@@ -57,32 +59,24 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     /*-------Private Methods-------*/
     private void initialize() {
+        registerBtn = findViewById(R.id.registerBtn);
+        registerBtn.setOnClickListener(this);
         signInBtn = findViewById(R.id.signInBtn);
         signInBtn.setOnClickListener(this);
-        googleBtn = findViewById(R.id.googleBtn);
-        googleBtn.setOnClickListener(this);
-        facebookBtn = findViewById(R.id.facebookBtn);
-        facebookBtn.setOnClickListener(this);
-        fgPwd = findViewById(R.id.forgotPwd);
-        fgPwd.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
-            case R.id.signInBtn:
-                Log.d(TAG,"Button clicked!");
-                intent = new Intent(LoginActivity.this,MainActivity.class);
+            case R.id.registerBtn:
+                intent = new Intent(PaginationActivity.this,RegisterActivity.class);
                 startActivity(intent);
+                finish();
                 break;
-            case R.id.googleBtn:
-                Log.d(TAG,"Google Button clicked!");
-                break;
-            case R.id.facebookBtn:
-                Log.d(TAG,"Facebook Button clicked!");
-                break;
-            case R.id.forgotPwd:
-                Log.d(TAG,"Forgot Password clicked!");
+            case R.id.signInBtn:
+                intent = new Intent(PaginationActivity.this,LoginActivity.class);
+                startActivity(intent);
+                finish();
                 break;
         }
     }

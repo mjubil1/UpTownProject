@@ -33,7 +33,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(2000);
-                    intent = new Intent(SplashActivity.this,LoginActivity.class);
+                    intent = new Intent(SplashActivity.this,PaginationActivity.class);
                     startActivity(intent);
                     finish();
                 } catch(InterruptedException e) {
@@ -42,35 +42,5 @@ public class SplashActivity extends AppCompatActivity {
             }
         };
         thread.start();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d(TAG,"onStart");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d(TAG,"onResume");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d(TAG,"onPause");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d(TAG,"onStop");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d(TAG,"onDestroy");
     }
 }

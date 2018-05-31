@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="splashGray">#656565</color>
     <color name="splashBorder">#979797</color>
+    <color name="registerBtn">#373737</color>
+    <color name="signInBtn">#ECB028</color>
 </resources>
