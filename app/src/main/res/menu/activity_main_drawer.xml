@@ -6,22 +6,22 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@android:drawable/ic_input_get"
+            android:icon="@drawable/ic_baseline_home"
             android:fontFamily="@font/helveticaneue_medium"
             android:title="@string/home" />
         <item
             android:id="@+id/nav_redeem"
-            android:icon="@android:drawable/ic_menu_add"
+            android:icon="@drawable/ic_baseline_add"
             android:fontFamily="@font/helveticaneue_medium"
             android:title="@string/redeem_points" />
         <item
             android:id="@+id/nav_settings"
-            android:icon="@android:drawable/ic_menu_manage"
+            android:icon="@drawable/ic_baseline_settings"
             android:fontFamily="@font/helveticaneue_medium"
             android:title="@string/settings" />
         <item
             android:id="@+id/nav_logout"
-            android:icon="@android:drawable/ic_menu_revert"
+            android:icon="@drawable/ic_baseline_arrow_back"
             android:fontFamily="@font/helveticaneue_medium"
             android:title="@string/logout" />
 

@@ -1,17 +1,29 @@
 package project.uptown.sideproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
 
 /**
  * Created by Montrell on 5/31/2018.
  */
 
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
+public class RegisterActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener  {
 
     private static final String TAG = RegisterActivity.class.getName();
+
+    // UI REFERENCE
+    Intent intent;
+    EditText fNameEt,lNameEt,emailEt,pwdEt,conPwdEt;
+    Button signUpBtn;
+    Spinner genderSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +31,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_register);
         Log.d(TAG, "onCreate");
         initialize();
+
+        //from android developer page on using spinners
+        ArrayAdapter<CharSequence> spinAdapter = ArrayAdapter.createFromResource(this,
+                R.array.gender_array, android.R.layout.simple_spinner_item);
+        spinAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        genderSpinner.setAdapter(spinAdapter);
+        genderSpinner.setOnItemSelectedListener(this);
     }
 
     @Override
@@ -53,11 +72,33 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     /*-------Private Methods-------*/
     private void initialize() {
-
+        fNameEt = findViewById(R.id.fNameEt);
+        lNameEt = findViewById(R.id.lNameEt);
+        emailEt = findViewById(R.id.emailEt);
+        pwdEt = findViewById(R.id.pwdEt);
+        conPwdEt = findViewById(R.id.conPwdEt);
+        signUpBtn = findViewById(R.id.signUpBtn);
+        genderSpinner = findViewById(R.id.gender_spinner);
     }
 
     @Override
     public void onClick(View v) {
+        switch(v.getId()) {
+            case R.id.signUpBtn:
+                intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+        }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String text = parent.getItemAtPosition(position).toString();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
 
     }
 }
