@@ -24,6 +24,10 @@
     <string name="support">Support</string>
     <string name="title_activity_forgot_pwd">Forgot Password</string>
     <string name="submit">Submit</string>
+    <string name="slide1">UpTown just became more memorable</string>
+    <string name="slide2">Click now to get started!</string>
+    <string name="slide3">Some text to go here with Pagination</string>
+    <string name="slide4">Some text to go here with Pagination</string>
 
     <string-array name="gender_array">
         <item>Male</item>
