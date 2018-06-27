@@ -46,6 +46,7 @@ public class PaginationActivity  extends AppCompatActivity implements View.OnCli
         dotsCount = paginationAdapter.getCount();
         dots = new ImageView[dotsCount];
 
+        // Displays the nonactive dots to view
         for(int i = 0; i < dotsCount; i++) {
             dots[i] = new ImageView(this);
             dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),R.drawable.nonactive_dot));
@@ -67,6 +68,7 @@ public class PaginationActivity  extends AppCompatActivity implements View.OnCli
 
             @Override
             public void onPageSelected(int position) {
+                // Displays dots of active page for view
                 for(int i = 0; i < dotsCount ; i++) {
                     dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),R.drawable.nonactive_dot));
                 }

@@ -44,6 +44,7 @@ public class PaginationAdapter extends PagerAdapter {
         View view = layoutInflater.inflate(R.layout.pagination_layout, null);
         final TextView textView = view.findViewById(R.id.textView);
 
+        // Updates text for position of viewPager
         if(position == 0){
             textView.setText(R.string.slide1);
         } else if(position == 1){

@@ -2,8 +2,6 @@
     <string name="app_name">SideProject</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="title_activity_settings">SettingsActivity</string>
-    <string name="title_activity_redeem">RedeemActivity</string>
     <string name="title_activity_login">Sign in</string>
     <string name="signIn">Sign in</string>
     <string name="forgotPwd">Forgot Password?</string>
@@ -28,6 +26,13 @@
     <string name="slide2">Click now to get started!</string>
     <string name="slide3">Some text to go here with Pagination</string>
     <string name="slide4">Some text to go here with Pagination</string>
+    <string name="pointsTv">Points:</string>
+    <string name="pointCount">0</string>
+    <string name="locationTv">Location:</string>
+    <string name="area">Towson</string>
+    <string name="green_turtle">Green Turtle</string>
+    <string name="rec_room">Rec Room</string>
+    <string name="userName">Name</string>
 
     <string-array name="gender_array">
         <item>Male</item>
