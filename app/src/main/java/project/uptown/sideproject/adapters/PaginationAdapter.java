@@ -19,7 +19,7 @@ import project.uptown.sideproject.R;
 
 public class PaginationAdapter extends PagerAdapter {
 
-    Context context;
+    private static Context context;
     private LayoutInflater layoutInflater;
     private Integer [] paginationText = {R.string.slide1,R.string.slide2,R.string.slide3,R.string.slide4};
 

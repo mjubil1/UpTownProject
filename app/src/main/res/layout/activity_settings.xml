@@ -19,10 +19,75 @@
             android:layout_height="wrap_content"
             />
 
-        <FrameLayout
-            android:id="@+id/frame_container"
+        <android.support.constraint.ConstraintLayout
+            android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:background="@drawable/settings_background"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <TextView
+                android:id="@+id/supportTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="233dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="Arial"
+                android:text="@string/support"
+                android:textColor="#D3D3D3"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/supportView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <ListView
+                android:id="@+id/supportView"
+                android:layout_width="300dp"
+                android:layout_height="125dp"
+                android:background="@drawable/lv_background"
+                android:dividerHeight="1.0sp"
+                app:layout_constraintBottom_toTopOf="@+id/settingsTv"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline1"
+                app:layout_constraintTop_toBottomOf="@+id/supportTv" />
+
+            <TextView
+                android:id="@+id/settingsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="233dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="Arial"
+                android:text="@string/account_settings"
+                android:textColor="#D3D3D3"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/settingsView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.50"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/supportView" />
+
+            <ListView
+                android:id="@+id/settingsView"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:background="@drawable/lv_background"
+                android:dividerHeight="1.0sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/settingsTv" />
+
+            <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline1"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".1"/>
+
+        </android.support.constraint.ConstraintLayout>
     </LinearLayout>
 
     <android.support.design.widget.NavigationView

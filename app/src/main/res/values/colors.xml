@@ -7,4 +7,5 @@
     <color name="splashBorder">#979797</color>
     <color name="registerBtn">#373737</color>
     <color name="signInBtn">#ECB028</color>
+    <color name="active_dot1">#FFFF00</color>
 </resources>

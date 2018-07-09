@@ -30,6 +30,7 @@ public class PaginationActivity  extends AppCompatActivity implements View.OnCli
     ViewPager vp;
     LinearLayout sliderDots;
     PaginationAdapter paginationAdapter;
+
     private int dotsCount;
     private ImageView[] dots;
 
@@ -39,9 +40,6 @@ public class PaginationActivity  extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_pagination);
         Log.d(TAG, "onCreate");
         initialize();
-
-        paginationAdapter = new PaginationAdapter(this);
-        vp.setAdapter(paginationAdapter);
 
         dotsCount = paginationAdapter.getCount();
         dots = new ImageView[dotsCount];
@@ -115,6 +113,10 @@ public class PaginationActivity  extends AppCompatActivity implements View.OnCli
     /*-------Private Methods-------*/
     private void initialize() {
         vp = findViewById(R.id.paginationPager);
+
+        paginationAdapter = new PaginationAdapter( this);
+        vp.setAdapter(paginationAdapter);
+
         registerBtn = findViewById(R.id.registerBtn);
         sliderDots = findViewById(R.id.sliderDots);
         registerBtn.setOnClickListener(this);
